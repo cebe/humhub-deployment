@@ -1,7 +1,11 @@
 Humhub Deployment
 =================
 
-Tools for deploying a Humhub installation together with modules.
+This repostiroy provides reliable deployments for Humhub.
+It allows you to install Humhub with a defined set of modules, themes and custom configuration.
+
+It is using git submodules to handle dependencies and a `Makefile` to
+glue everything together on deployment.
 
 Starting a new project
 ----------------------
@@ -16,7 +20,7 @@ git -C ./humhub checkout v1.2.4
 git add humhub
 
 # add this repo
-git submodule add https://gitlab.cebe.cc/humhub-dev/humhub-deployment tools
+git submodule add https://github.com/cebe/humhub-deployment tools
 echo "include tools/Makefile.inc" > Makefile
 git add Makefile
 
@@ -27,8 +31,15 @@ git add .gitignore
 
 commit your changes and you are ready to go.
 
-Adding Modules
---------------
+Deployment
+----------
+
+Run `make deploy`.
+
+Customization
+-------------
+
+### Adding Modules
 
 Add modules by putting them into the `modules` folder. This will
 be synced with humhub on deployment.
@@ -42,8 +53,7 @@ git submodule add https://github.com/humhub/humhub-modules-custom-pages modules/
 
 and optionally check out a specific version.
 
-Adding Themes
--------------
+### Adding Themes
 
 Add themes by putting them into the `themes` folder. This will
 be synced with humhub on deployment.
@@ -51,14 +61,12 @@ be synced with humhub on deployment.
 You can develop custom modules directly in your repo, or add other themes as
 git submodules.
 
-Changing Humhub Config
-----------------------
+### Changing Humhub Config
 
 TBD
 
 
-Installing Additional composer packages
----------------------------------------
+### Installing Additional composer packages
 
 For allowing to add additional composer packages without touching the original composer.json file
 provided by humhub, we use the [wikimedia/composer-merge-plugin](https://github.com/wikimedia/composer-merge-plugin).

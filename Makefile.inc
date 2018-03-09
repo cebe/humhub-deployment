@@ -11,7 +11,7 @@ all:
 deploy: refresh-modules $(CREATEMODULES) refresh-themes $(CREATETHEMES) composer
 	git submodule update --init
 
-composer.json: tools/composer.json
+composer.json: tools/composer.json.dist
 	cp $< $@
 
 composer: composer.json

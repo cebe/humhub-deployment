@@ -6,6 +6,7 @@
 		"merge-plugin": {
 			"include": [
 				"composer.local.json",
+				"humhub/composer.json",
 				"humhub/protected/modules/*/composer.json"
 			],
 			"recurse": true,
@@ -13,6 +14,12 @@
 			"ignore-duplicates": false,
 			"merge-dev": true,
 			"merge-extra": false
+		}
+	},
+	"config": {
+		"vendor-dir": "humhub/protected/vendor",
+		"fxp-asset": {
+			"enabled": false
 		}
 	},
 	"repositories": [
