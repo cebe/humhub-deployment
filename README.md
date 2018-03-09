@@ -19,6 +19,10 @@ git add humhub
 git submodule add https://gitlab.cebe.cc/humhub-dev/humhub-deployment tools
 echo "include tools/Makefile.inc" > Makefile
 git add Makefile
+
+# composer.json is managed by the Makefile, so ignore it in git
+echo "/composer.json" > .gitignore
+git add .gitignore
 ```
 
 commit your changes and you are ready to go.
@@ -51,4 +55,19 @@ Changing Humhub Config
 ----------------------
 
 TBD
+
+
+Installing Additional composer packages
+---------------------------------------
+
+For allowing to add additional composer packages without touching the original composer.json file
+provided by humhub, we use the [wikimedia/composer-merge-plugin](https://github.com/wikimedia/composer-merge-plugin).
+
+You should ignore `composer.json` in `.gitignore` as this file is manged by the `Makefile`.
+If you want to add custom packages, create a `composer.local.json` file and specify all
+requirements and autoloading definitions there.
+
+
+
+
 
