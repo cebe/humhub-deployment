@@ -63,6 +63,8 @@ git submodule add https://github.com/humhub/humhub-modules-custom-pages modules/
 
 and optionally check out a specific version.
 
+Module may provide a `composer.json` file to specify additional dependencies to be installed.
+
 ### Adding Themes
 
 Add themes by putting them into the `themes` folder. This will
