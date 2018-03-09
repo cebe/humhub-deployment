@@ -24,6 +24,9 @@ git-submodules:
 composer.json: tools/composer.json.dist
 	cp $< $@
 
+composer-update: composer.json
+	composer update $(COMPOSER_FLAGS)
+
 composer: composer.json
 	composer install --no-suggest -o $(COMPOSER_FLAGS)
 	cd humhub/protected/vendor && ln -fs bower-asset bower

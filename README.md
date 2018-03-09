@@ -87,7 +87,7 @@ requirements and autoloading definitions there.
 The `composer.lock` file should be committed to the repository as it tracks the exact versions
 of installed packages and allows reliable deplyoments.
 
-
+For updating packages, run `composer update` as you would normally do.
 
 
 
