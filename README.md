@@ -26,12 +26,26 @@ commit your changes and you are ready to go.
 Adding Modules
 --------------
 
-TBD
+Add modules by putting them into the `modules` folder. This will
+be synced with humhub on deployment.
+
+You can develop custom modules directly in your repo, or add other modules as
+git submodules. For example, adding the custom-pages module:
+
+```
+git submodule add https://github.com/humhub/humhub-modules-custom-pages modules/custom_pages
+```
+
+and optionally check out a specific version.
 
 Adding Themes
 -------------
 
-TBD
+Add themes by putting them into the `themes` folder. This will
+be synced with humhub on deployment.
+
+You can develop custom modules directly in your repo, or add other themes as
+git submodules.
 
 Changing Humhub Config
 ----------------------
