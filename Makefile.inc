@@ -29,8 +29,6 @@ composer-update: composer.json
 
 composer: composer.json
 	composer install --no-suggest -o $(COMPOSER_FLAGS)
-	cd humhub/protected/vendor && ln -fs bower-asset bower
-	cd humhub/protected/vendor && ln -fs npm-asset npm
 
 # TODO define how to do composer update
 # TODO figure out how to add a module without touching other dependencies
