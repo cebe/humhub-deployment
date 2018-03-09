@@ -7,6 +7,12 @@ It allows you to install Humhub with a defined set of modules, themes and custom
 It is using git submodules to handle dependencies and a `Makefile` to
 glue everything together on deployment.
 
+Requirements
+------------
+
+- [Composer](https://getcomposer.org/doc/00-intro.md#globally) installed and availble as `composer` command in your PATH.
+- [GNU Make](https://www.gnu.org/software/make/)
+
 Starting a new project
 ----------------------
 
