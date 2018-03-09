@@ -2,6 +2,15 @@
 	"require": {
 		"wikimedia/composer-merge-plugin": "~1.4.1"
 	},
+	"provide": {
+		"ext-ldap": "*"
+	},
+	"config": {
+		"vendor-dir": "humhub/protected/vendor",
+		"fxp-asset": {
+			"enabled": false
+		}
+	},
 	"extra": {
 		"merge-plugin": {
 			"include": [
@@ -14,19 +23,17 @@
 			"ignore-duplicates": false,
 			"merge-dev": true,
 			"merge-extra": false
+		},
+		"yii\\composer\\Installer::postInstall": {
+			"generateCookieValidationKey": [
+				"humhub/protected/config/web.php"
+			]
 		}
 	},
-	"config": {
-		"vendor-dir": "humhub/protected/vendor",
-		"fxp-asset": {
-			"enabled": false
-		}
-	},
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://asset-packagist.org"
-		}
-	]
+	"scripts": {
+		"post-install-cmd": [
+			"yii\\composer\\Installer::postInstall"
+		]
+	}
 }
 

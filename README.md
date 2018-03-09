@@ -12,6 +12,7 @@ Requirements
 
 - [Composer](https://getcomposer.org/doc/00-intro.md#globally) installed and availble as `composer` command in your PATH.
 - [GNU Make](https://www.gnu.org/software/make/)
+- HumHub 1.3-dev or higher
 
 Starting a new project
 ----------------------
@@ -22,7 +23,7 @@ git init .
 
 # add humhub and check out a stable version
 git submodule add https://github.com/humhub/humhub humhub
-git -C ./humhub checkout v1.2.4
+git -C ./humhub checkout v1.3-dev
 git add humhub
 
 # add this repo
@@ -40,7 +41,10 @@ commit your changes and you are ready to go.
 Deployment
 ----------
 
-Run `make deploy`.
+Run `make deploy` in dev env or `make deploy ENV=prod` in production.
+
+For development, `make start` and `make stop` provide shortcuts for starting
+the PHP builtin webserver. Use `make start PORT=1234` to specify a different port to use.
 
 Customization
 -------------
