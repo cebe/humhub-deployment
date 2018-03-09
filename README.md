@@ -16,7 +16,7 @@ Requirements
 Starting a new project
 ----------------------
 
-```
+```bash
 # create empty git repo in current folder
 git init .
 
@@ -53,7 +53,7 @@ be synced with humhub on deployment.
 You can develop custom modules directly in your repo, or add other modules as
 git submodules. For example, adding the custom-pages module:
 
-```
+```bash
 git submodule add https://github.com/humhub/humhub-modules-custom-pages modules/custom_pages
 ```
 
