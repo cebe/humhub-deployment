@@ -80,6 +80,8 @@ provided by humhub, we use the [wikimedia/composer-merge-plugin](https://github.
 You should ignore `composer.json` in `.gitignore` as this file is manged by the `Makefile`.
 If you want to add custom packages, create a `composer.local.json` file and specify all
 requirements and autoloading definitions there.
+The `composer.lock` file should be committed to the repository as it tracks the exact versions
+of installed packages and allows reliable deplyoments.
 
 
 
