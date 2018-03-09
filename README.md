@@ -64,7 +64,7 @@ and optionally check out a specific version.
 Add themes by putting them into the `themes` folder. This will
 be synced with humhub on deployment.
 
-You can develop custom modules directly in your repo, or add other themes as
+You can develop custom themes directly in your repo, or add other themes as
 git submodules.
 
 ### Changing Humhub Config
