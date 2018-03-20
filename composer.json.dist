@@ -1,19 +1,19 @@
-{  
-   "require":{  
+{
+   "require":{
       "wikimedia/composer-merge-plugin":"~1.4.1"
    },
-   "provide":{  
+   "provide":{
       "ext-ldap":"*"
    },
-   "config":{  
+   "config":{
       "vendor-dir":"humhub/protected/vendor",
-      "fxp-asset":{  
+      "fxp-asset":{
          "enabled":false
       }
    },
-   "extra":{  
-      "merge-plugin":{  
-         "include":[  
+   "extra":{
+      "merge-plugin":{
+         "include":[
             "composer.local.json",
             "humhub/composer.json",
             "humhub/protected/modules/*/composer.json"
@@ -30,8 +30,8 @@
          ]
       }
    },
-   "scripts":{  
-      "post-install-cmd":[  
+   "scripts":{
+      "post-install-cmd":[
          "yii\\composer\\Installer::postInstall"
       ]
    }
