@@ -24,8 +24,8 @@
          "merge-dev":true,
          "merge-extra":false
       },
-      "yii\\composer\\Installer::postInstall":{  
-         "generateCookieValidationKey":[  
+      "yii\\composer\\Installer::postInstall":{
+         "generateCookieValidationKey":[
             "humhub/protected/config/web.php"
          ]
       }
