@@ -1,39 +1,38 @@
 {
-	"require": {
-		"wikimedia/composer-merge-plugin": "~1.4.1"
-	},
-	"provide": {
-		"ext-ldap": "*"
-	},
-	"config": {
-		"vendor-dir": "humhub/protected/vendor",
-		"fxp-asset": {
-			"enabled": false
-		}
-	},
-	"extra": {
-		"merge-plugin": {
-			"include": [
-				"composer.local.json",
-				"humhub/composer.json",
-				"humhub/protected/modules/*/composer.json"
-			],
-			"recurse": true,
-			"replace": false,
-			"ignore-duplicates": false,
-			"merge-dev": true,
-			"merge-extra": false
-		},
-		"yii\\composer\\Installer::postInstall": {
-			"generateCookieValidationKey": [
-				"humhub/protected/config/web.php"
-			]
-		}
-	},
-	"scripts": {
-		"post-install-cmd": [
-			"yii\\composer\\Installer::postInstall"
-		]
-	}
+   "require":{
+      "wikimedia/composer-merge-plugin":"~1.4.1"
+   },
+   "provide":{
+      "ext-ldap":"*"
+   },
+   "config":{
+      "vendor-dir":"humhub/protected/vendor",
+      "fxp-asset":{
+         "enabled":false
+      }
+   },
+   "extra":{
+      "merge-plugin":{
+         "include":[
+            "composer.local.json",
+            "humhub/composer.json",
+            "humhub/protected/modules/*/composer.json"
+         ],
+         "recurse":true,
+         "replace":false,
+         "ignore-duplicates":false,
+         "merge-dev":true,
+         "merge-extra":false
+      },
+      "yii\\composer\\Installer::postInstall":{
+         "generateCookieValidationKey":[
+            "humhub/protected/config/web.php"
+         ]
+      }
+   },
+   "scripts":{
+      "post-install-cmd":[
+         "yii\\composer\\Installer::postInstall"
+      ]
+   }
 }
-
